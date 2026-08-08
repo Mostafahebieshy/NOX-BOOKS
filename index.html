@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOX BOOKS | Mostafa Hebieshy</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #0b0b0d;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at center, #24242a 0%, #111116 45%, #080809 100%);
+    }
+
+    .hero {
+      max-width: 900px;
+    }
+
+    .brand {
+      font-size: 64px;
+      letter-spacing: 8px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .tagline {
+      color: #bdbdc5;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      margin: auto;
+      color: #d5d5d8;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 13px 30px;
+      border: 1px solid #ffffff;
+      border-radius: 30px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #ffffff;
+      color: #0b0b0d;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(8,8,9,0.95);
+      border-bottom: 1px solid #29292e;
+      text-align: center;
+      padding: 15px;
+    }
+
+    nav a {
+      color: #eeeeee;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #aaaaaa;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #a9a9af;
+      margin-bottom: 50px;
+    }
+
+    .book-card {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 45px;
+      align-items: center;
+      background: #141419;
+      border: 1px solid #29292e;
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .book-cover {
+      width: 100%;
+      height: 420px;
+      border-radius: 10px;
+      background: linear-gradient(145deg, #24242b, #0d0d10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+      border: 1px solid #33333a;
+    }
+
+    .book-cover h3 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    .book-info h3 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .author {
+      color: #aaaaaf;
+      margin-bottom: 25px;
+    }
+
+    .book-info p {
+      color: #d0d0d3;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      color: #d0d0d3;
+      font-size: 18px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #111116;
+      border-radius: 18px;
+      padding: 50px 25px;
+    }
+
+    footer {
+      border-top: 1px solid #29292e;
+      text-align: center;
+      padding: 30px 20px;
+      color: #88888f;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .brand {
+        font-size: 42px;
+        letter-spacing: 5px;
+      }
+
+      .tagline {
+        font-size: 16px;
+      }
+
+      .book-card {
+        grid-template-columns: 1fr;
+      }
+
+      .book-cover {
+        height: 380px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#books">Books</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <div class="hero">
+      <div class="brand">NOX BOOKS</div>
+
+      <div class="tagline">
+        Where Every Book Hides a Secret
+      </div>
+
+      <p class="hero-text">
+        Discover stories of mystery, horror, suspense, and unforgettable worlds.
+        Welcome to NOX BOOKS by Mostafa Hebieshy.
+      </p>
+
+      <a href="#books" class="button">
+        Explore Books
+      </a>
+    </div>
+  </header>
+
+  <section id="books">
+
+    <h2 class="section-title">Featured Book</h2>
+
+    <p class="section-subtitle">
+      Discover the latest story from NOX BOOKS.
+    </p>
+
+    <div class="book-card">
+
+      <div class="book-cover">
+        <h3>
+          THE ROOM<br>
+          THAT WAS<br>
+          NEVER BUILT
+        </h3>
+      </div>
+
+      <div class="book-info">
+
+        <h3>The Room That Was Never Built</h3>
+
+        <div class="author">
+          By Mostafa Hebieshy
+        </div>
+
+        <p>
+          A psychological mystery about an impossible apartment,
+          a room that should never have existed, and secrets hidden
+          inside walls that were never supposed to be there.
+        </p>
+
+        <p>
+          Enter carefully. Some doors are not meant to be opened.
+        </p>
+
+        <div class="price">
+          Available Soon
+        </div>
+
+        <a href="#" class="button">
+          Read More
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+  <section id="about">
+
+    <h2 class="section-title">About the Author</h2>
+
+    <p class="about">
+      Mostafa Hebieshy is an Egyptian writer and creator whose work explores
+      mystery, psychological horror, suspense, and stories that blur the line
+      between reality and imagination.
+    </p>
+
+  </section>
+
+  <section id="contact">
+
+    <div class="contact">
+
+      <h2 class="section-title">Contact</h2>
+
+      <p class="section-subtitle">
+        For questions, publishing inquiries, or collaboration.
+      </p>
+
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        class="button">
+        Facebook
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 NOX BOOKS — Mostafa Hebieshy. All Rights Reserved.
+  </footer>
+
+</body>
+  </html>
