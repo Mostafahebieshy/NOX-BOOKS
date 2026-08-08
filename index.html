@@ -1,327 +1,696 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOX BOOKS | Mostafa Hebieshy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<title>كتب نوكس | Mostafa Hebieshy</title>
+
+<meta name="description" content="كتب نوكس — مكتبة رقمية من تأليف الكاتب مصطفى حبيشي. اكتشف الكتب والروايات والقصص.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:#08080b;
+    color:#fff;
+    line-height:1.8;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:1000;
+    background:rgba(8,8,11,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #25252b;
+}
+
+.navbar{
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#b78cff;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+}
+
+.menu a{
+    color:#ddd;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#b78cff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    padding-top:80px;
+    background:
+    radial-gradient(circle at 50% 35%,#29223b 0%,#111117 35%,#08080b 70%);
+}
+
+.hero-content{
+    max-width:850px;
+    margin:auto;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 18px;
+    border:1px solid #65489a;
+    border-radius:30px;
+    color:#c9a9ff;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:clamp(48px,9vw,90px);
+    margin-bottom:15px;
+    letter-spacing:3px;
+}
+
+.hero h1 span{
+    color:#b78cff;
+}
+
+.hero h2{
+    font-size:24px;
+    font-weight:normal;
+    color:#bbb;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#aaa;
+    font-size:18px;
+}
+
+.buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 30px;
+    border-radius:30px;
+    border:1px solid #b78cff;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.btn.primary{
+    background:#b78cff;
+    color:#08080b;
+    font-weight:bold;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(183,140,255,.2);
+}
+
+/* SECTIONS */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#999;
+}
+
+/* BOOKS */
+
+.books{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.book{
+    background:#111116;
+    border:1px solid #27272e;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.book:hover{
+    transform:translateY(-8px);
+    border-color:#7652a8;
+}
+
+.book-cover{
+    height:330px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+    background:
+    linear-gradient(145deg,#21172f,#0d0d12);
+}
+
+.book-cover h3{
+    font-size:30px;
+}
+
+.book-info{
+    padding:22px;
+}
+
+.book-info h3{
+    margin-bottom:8px;
+}
+
+.book-info p{
+    color:#999;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.price{
+    color:#c9a9ff;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/* ABOUT */
+
+.about{
+    background:#0d0d12;
+}
+
+.about-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-box p{
+    color:#aaa;
+    font-size:18px;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.feature{
+    text-align:center;
+    padding:30px 20px;
+    background:#111116;
+    border:1px solid #24242b;
+    border-radius:15px;
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.feature p{
+    color:#999;
+    font-size:14px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#999;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #25252b;
+    padding:35px 0;
+    text-align:center;
+    color:#777;
+}
+
+footer strong{
+    color:#bbb;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .navbar{
+        height:65px;
     }
 
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: #0b0b0d;
-      color: #f5f5f5;
-      line-height: 1.7;
+    .logo{
+        font-size:20px;
     }
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      background:
-        radial-gradient(circle at center, #24242a 0%, #111116 45%, #080809 100%);
+    .menu{
+        gap:12px;
+        font-size:13px;
     }
 
-    .hero {
-      max-width: 900px;
+    .hero{
+        padding-top:80px;
     }
 
-    .brand {
-      font-size: 64px;
-      letter-spacing: 8px;
-      font-weight: bold;
-      margin-bottom: 15px;
+    .hero h2{
+        font-size:20px;
     }
 
-    .tagline {
-      color: #bdbdc5;
-      font-size: 20px;
-      letter-spacing: 2px;
-      margin-bottom: 35px;
+    .hero p{
+        font-size:16px;
     }
 
-    .hero-text {
-      max-width: 650px;
-      margin: auto;
-      color: #d5d5d8;
-      font-size: 18px;
+    section{
+        padding:65px 0;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 13px 30px;
-      border: 1px solid #ffffff;
-      border-radius: 30px;
-      color: #ffffff;
-      text-decoration: none;
-      transition: 0.3s;
+    .section-title h2{
+        font-size:30px;
     }
 
-    .button:hover {
-      background: #ffffff;
-      color: #0b0b0d;
+    .book-cover{
+        height:300px;
     }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(8,8,9,0.95);
-      border-bottom: 1px solid #29292e;
-      text-align: center;
-      padding: 15px;
-    }
-
-    nav a {
-      color: #eeeeee;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      color: #aaaaaa;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 90px 25px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: #a9a9af;
-      margin-bottom: 50px;
-    }
-
-    .book-card {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 45px;
-      align-items: center;
-      background: #141419;
-      border: 1px solid #29292e;
-      border-radius: 18px;
-      padding: 30px;
-    }
-
-    .book-cover {
-      width: 100%;
-      height: 420px;
-      border-radius: 10px;
-      background: linear-gradient(145deg, #24242b, #0d0d10);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 25px;
-      border: 1px solid #33333a;
-    }
-
-    .book-cover h3 {
-      font-size: 28px;
-      letter-spacing: 2px;
-    }
-
-    .book-info h3 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    .author {
-      color: #aaaaaf;
-      margin-bottom: 25px;
-    }
-
-    .book-info p {
-      color: #d0d0d3;
-      margin-bottom: 20px;
-    }
-
-    .price {
-      font-size: 25px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    .about {
-      text-align: center;
-      max-width: 750px;
-      margin: auto;
-      color: #d0d0d3;
-      font-size: 18px;
-    }
-
-    .contact {
-      text-align: center;
-      background: #111116;
-      border-radius: 18px;
-      padding: 50px 25px;
-    }
-
-    footer {
-      border-top: 1px solid #29292e;
-      text-align: center;
-      padding: 30px 20px;
-      color: #88888f;
-      font-size: 14px;
-    }
-
-    @media (max-width: 700px) {
-      .brand {
-        font-size: 42px;
-        letter-spacing: 5px;
-      }
-
-      .tagline {
-        font-size: 16px;
-      }
-
-      .book-card {
-        grid-template-columns: 1fr;
-      }
-
-      .book-cover {
-        height: 380px;
-      }
-
-      nav a {
-        margin: 0 7px;
-        font-size: 13px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#books">Books</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<!-- NAVIGATION -->
 
-  <header id="home">
-    <div class="hero">
-      <div class="brand">NOX BOOKS</div>
+<nav>
+<div class="container navbar">
 
-      <div class="tagline">
-        Where Every Book Hides a Secret
-      </div>
+<a href="#home" class="logo">
+NOX <span>BOOKS</span>
+</a>
 
-      <p class="hero-text">
-        Discover stories of mystery, horror, suspense, and unforgettable worlds.
-        Welcome to NOX BOOKS by Mostafa Hebieshy.
-      </p>
+<div class="menu">
+<a href="#home">الرئيسية</a>
+<a href="#books">الكتب</a>
+<a href="#about">عن نوكس</a>
+<a href="#contact">تواصل معنا</a>
+</div>
 
-      <a href="#books" class="button">
-        Explore Books
-      </a>
-    </div>
-  </header>
+</div>
+</nav>
 
-  <section id="books">
 
-    <h2 class="section-title">Featured Book</h2>
+<!-- HERO -->
 
-    <p class="section-subtitle">
-      Discover the latest story from NOX BOOKS.
-    </p>
+<header class="hero" id="home">
 
-    <div class="book-card">
+<div class="container hero-content">
 
-      <div class="book-cover">
-        <h3>
-          THE ROOM<br>
-          THAT WAS<br>
-          NEVER BUILT
-        </h3>
-      </div>
+<div class="badge">
+NOX BOOKS
+</div>
 
-      <div class="book-info">
+<h1>
+كتب <span>نوكس</span>
+</h1>
 
-        <h3>The Room That Was Never Built</h3>
+<h2>
+حيث يخفي كل كتاب سرًا
+</h2>
 
-        <div class="author">
-          By Mostafa Hebieshy
-        </div>
+<p>
+اكتشف عالمًا من الغموض والرعب والتشويق،
+واقرأ أعمال الكاتب مصطفى حبيشي في تجربة رقمية مختلفة.
+</p>
 
-        <p>
-          A psychological mystery about an impossible apartment,
-          a room that should never have existed, and secrets hidden
-          inside walls that were never supposed to be there.
-        </p>
+<div class="buttons">
 
-        <p>
-          Enter carefully. Some doors are not meant to be opened.
-        </p>
+<a href="#books" class="btn primary">
+استكشف الكتب
+</a>
 
-        <div class="price">
-          Available Soon
-        </div>
+<a href="#about" class="btn">
+اعرف المزيد
+</a>
 
-        <a href="#" class="button">
-          Read More
-        </a>
+</div>
 
-      </div>
-    </div>
+</div>
 
-  </section>
+</header>
 
-  <section id="about">
 
-    <h2 class="section-title">About the Author</h2>
+<!-- BOOKS -->
 
-    <p class="about">
-      Mostafa Hebieshy is an Egyptian writer and creator whose work explores
-      mystery, psychological horror, suspense, and stories that blur the line
-      between reality and imagination.
-    </p>
+<section id="books">
 
-  </section>
+<div class="container">
 
-  <section id="contact">
+<div class="section-title">
 
-    <div class="contact">
+<h2>كتب نوكس</h2>
 
-      <h2 class="section-title">Contact</h2>
+<p>
+اكتشف أحدث الكتب والروايات
+</p>
 
-      <p class="section-subtitle">
-        For questions, publishing inquiries, or collaboration.
-      </p>
+</div>
 
-      <a
-        href="https://www.facebook.com/"
-        target="_blank"
-        class="button">
-        Facebook
-      </a>
 
-    </div>
+<div class="books">
 
-  </section>
 
-  <footer>
-    © 2026 NOX BOOKS — Mostafa Hebieshy. All Rights Reserved.
-  </footer>
+<!-- BOOK 1 -->
+
+<div class="book">
+
+<div class="book-cover">
+
+<h3>
+الغرفة التي<br>
+لم تُبنَ قط
+</h3>
+
+</div>
+
+<div class="book-info">
+
+<h3>
+The Room That Was Never Built
+</h3>
+
+<p>
+رواية غموض ورعب نفسي تأخذك إلى مكان لا ينبغي أن يكون موجودًا.
+</p>
+
+<div class="price">
+قريبًا
+</div>
+
+<a href="#contact" class="btn">
+اعرف المزيد
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 2 -->
+
+<div class="book">
+
+<div class="book-cover">
+
+<h3>
+كتاب جديد
+</h3>
+
+</div>
+
+<div class="book-info">
+
+<h3>
+قريبًا في نوكس
+</h3>
+
+<p>
+عمل جديد قادم إلى مكتبة كتب نوكس.
+</p>
+
+<div class="price">
+قريبًا
+</div>
+
+<a href="#contact" class="btn">
+تابع الأخبار
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 3 -->
+
+<div class="book">
+
+<div class="book-cover">
+
+<h3>
+رواية جديدة
+</h3>
+
+</div>
+
+<div class="book-info">
+
+<h3>
+قريبًا
+</h3>
+
+<p>
+استعد لتجربة جديدة من الغموض والتشويق.
+</p>
+
+<div class="price">
+قريبًا
+</div>
+
+<a href="#contact" class="btn">
+اعرف المزيد
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>عن كتب نوكس</h2>
+
+</div>
+
+<div class="about-box">
+
+<p>
+كتب نوكس هي مكتبة رقمية تهدف إلى تقديم أعمال الكاتب
+<strong>مصطفى حبيشي</strong>
+في مكان واحد، مع تجربة بسيطة وأنيقة لمحبي الروايات والغموض والرعب والتشويق.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>لماذا نوكس؟</h2>
+
+<p>
+تجربة قراءة مختلفة
+</p>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+
+<div class="icon">📚</div>
+
+<h3>كتب أصلية</h3>
+
+<p>
+أعمال أدبية أصلية من تأليف الكاتب.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">🔒</div>
+
+<h3>شراء آمن</h3>
+
+<p>
+سيتم توفير خيارات دفع إلكترونية آمنة.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">📱</div>
+
+<h3>متوافق مع الهاتف</h3>
+
+<p>
+يمكنك تصفح المكتبة من الهاتف أو الكمبيوتر.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">⚡</div>
+
+<h3>وصول سريع</h3>
+
+<p>
+تجربة بسيطة وسريعة بدون تعقيد.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container contact">
+
+<div class="section-title">
+
+<h2>تواصل معنا</h2>
+
+<p>
+تابع أخبار كتب نوكس وإصدارات الكاتب مصطفى حبيشي.
+</p>
+
+</div>
+
+<a
+href="https://www.facebook.com/"
+target="_blank"
+class="btn primary">
+صفحتنا على فيسبوك
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 <strong>NOX BOOKS</strong>
+</p>
+
+<p>
+جميع الحقوق محفوظة للكاتب مصطفى حبيشي
+</p>
+
+</div>
+
+</footer>
+
 
 </body>
   </html>
