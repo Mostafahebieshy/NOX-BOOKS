@@ -3,392 +3,387 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="NOX BOOKS - مكتبة رقمية من تأليف مصطفى حبيشي">
+
 <title>NOX BOOKS | مصطفى حبيشي</title>
 
 <style>
 *{
-box-sizing:border-box;
-margin:0;
-padding:0
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-scroll-behavior:smooth
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:Tahoma,Arial,sans-serif;
-background:#09080d;
-color:#f4f0fa;
-line-height:1.8
+  font-family:Tahoma,Arial,sans-serif;
+  background:#08070c;
+  color:#fff;
+  line-height:1.8;
 }
 
 a{
-text-decoration:none;
-color:inherit
+  text-decoration:none;
 }
 
 header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(8,7,12,.96);
-border-bottom:1px solid #2a2135
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(8,7,12,.97);
+  border-bottom:1px solid #29202f;
 }
 
 .nav{
-max-width:1100px;
-margin:auto;
-padding:15px 20px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px
+  max-width:1100px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
 }
 
 .logo{
-font-weight:900;
-font-size:25px;
-color:white;
-letter-spacing:2px
+  font-size:25px;
+  font-weight:bold;
+  color:#fff;
+  letter-spacing:2px;
 }
 
 .logo span{
-display:block;
-color:#b477ff;
-font-size:17px;
-letter-spacing:4px
+  display:block;
+  color:#b477ff;
+  font-size:16px;
+  letter-spacing:4px;
 }
 
 nav{
-display:flex;
-gap:20px;
-flex-wrap:wrap
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 nav a{
-color:#ddd;
-font-size:15px
+  color:#ddd;
 }
 
 nav a:hover{
-color:#b477ff
+  color:#b477ff;
 }
 
 .hero{
-min-height:620px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:70px 20px;
-background:
-radial-gradient(circle at 50% 35%,rgba(128,67,190,.2),transparent 42%),
-linear-gradient(180deg,#0c0a11,#09080d)
+  min-height:600px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:70px 20px;
+  background:
+  radial-gradient(circle at center,
+  rgba(132,70,190,.23),
+  transparent 45%),
+  linear-gradient(#0d0b12,#08070c);
 }
 
-.hero-inner{
-max-width:850px
+.hero-content{
+  max-width:850px;
 }
 
 .badge{
-display:inline-block;
-border:1px solid #8f55c5;
-color:#c08cff;
-padding:7px 25px;
-border-radius:40px;
-margin-bottom:28px
+  display:inline-block;
+  border:1px solid #a66be0;
+  color:#c18bff;
+  border-radius:40px;
+  padding:7px 25px;
+  margin-bottom:25px;
 }
 
 h1{
-font-size:clamp(50px,9vw,90px);
-line-height:1.15;
-margin-bottom:20px
+  font-size:clamp(48px,9vw,90px);
+  line-height:1.2;
+  margin-bottom:20px;
 }
 
 h1 span{
-color:#b477ff
+  color:#b477ff;
 }
 
 .hero p{
-font-size:20px;
-color:#bcb5c6;
-max-width:700px;
-margin:0 auto 30px
+  color:#bdb6c6;
+  font-size:19px;
+  max-width:700px;
+  margin:auto auto 30px;
 }
 
 .btn{
-display:inline-block;
-border:1px solid #b477ff;
-color:white;
-padding:13px 28px;
-border-radius:35px;
-margin:6px
+  display:inline-block;
+  padding:13px 28px;
+  border:1px solid #b477ff;
+  border-radius:35px;
+  color:#fff;
+  margin:5px;
 }
 
 .btn.primary{
-background:#b477ff;
-color:#110c18;
-font-weight:bold
+  background:#b477ff;
+  color:#100a16;
+  font-weight:bold;
 }
 
 section{
-max-width:1100px;
-margin:auto;
-padding:70px 20px
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
 }
 
-.section-title{
-text-align:center;
-font-size:34px;
-margin-bottom:35px
+.title{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:35px;
 }
 
-.section-title span{
-color:#b477ff
+.title span{
+  color:#b477ff;
 }
 
 .books{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-gap:25px
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:25px;
 }
 
 .book{
-background:#111016;
-border:1px solid #2b2036;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 12px 40px rgba(0,0,0,.25)
+  background:#111016;
+  border:1px solid #30233b;
+  border-radius:20px;
+  overflow:hidden;
 }
 
 .cover{
-height:270px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:25px;
-background:
-radial-gradient(circle,#261633,#0d0c12 70%)
+  height:300px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:25px;
+  background:
+  radial-gradient(circle,#2a1639,#0b0a0f 70%);
 }
 
 .cover h3{
-font-size:28px
+  font-size:28px;
 }
 
 .book-body{
-padding:22px
+  padding:22px;
 }
 
 .book-body h3{
-font-size:22px;
-margin-bottom:8px
+  font-size:22px;
+  margin-bottom:8px;
 }
 
 .book-body p{
-color:#aaa3b1;
-min-height:55px
+  color:#aaa3b0;
 }
 
 .price{
-font-size:25px;
-font-weight:bold;
-color:#c08cff;
-margin:14px 0
+  color:#c18bff;
+  font-size:26px;
+  font-weight:bold;
+  margin:15px 0;
 }
 
-.buy-btn{
-width:100%;
-border:0;
-border-radius:13px;
-padding:14px;
-background:#b477ff;
-color:#100b16;
-font-size:17px;
-font-weight:bold;
-cursor:pointer
-}
-
-.info{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:18px
-}
-
-.info-card{
-background:#111016;
-border:1px solid #2b2036;
-border-radius:18px;
-padding:22px
-}
-
-.info-card h3{
-color:#c08cff;
-margin-bottom:8px
+.buy{
+  width:100%;
+  padding:14px;
+  border:0;
+  border-radius:13px;
+  background:#b477ff;
+  color:#100a16;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
 .payment{
-max-width:750px;
-margin:auto;
-background:#111016;
-border:1px solid #34233f;
-border-radius:22px;
-padding:25px
+  max-width:750px;
+  margin:auto;
+  background:#111016;
+  border:1px solid #33243d;
+  border-radius:22px;
+  padding:25px;
 }
 
-.pay-row{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:15px;
-padding:17px;
-margin:10px 0;
-background:#0b0a0f;
-border:1px solid #2b2036;
-border-radius:14px
+.pay{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#09080d;
+  border:1px solid #2d2335;
+  padding:17px;
+  border-radius:13px;
+  margin:12px 0;
+  gap:15px;
 }
 
-.pay-number{
-font-size:21px;
-color:#c08cff;
-font-weight:bold;
-direction:ltr
+.number{
+  color:#c18bff;
+  font-size:21px;
+  font-weight:bold;
+  direction:ltr;
 }
 
 .copy{
-background:#251a30;
-color:white;
-border:0;
-border-radius:9px;
-padding:8px 14px;
-cursor:pointer
+  border:0;
+  background:#291b35;
+  color:#fff;
+  border-radius:8px;
+  padding:8px 15px;
+  cursor:pointer;
 }
 
 .modal{
-display:none;
-position:fixed;
-inset:0;
-z-index:2000;
-background:rgba(0,0,0,.84);
-padding:20px;
-overflow:auto
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  background:rgba(0,0,0,.88);
+  padding:20px;
+  overflow:auto;
 }
 
-.modal.show{
-display:flex;
-align-items:center;
-justify-content:center
+.modal.active{
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .modal-box{
-width:min(650px,100%);
-background:#111016;
-border:1px solid #8b55c1;
-border-radius:22px;
-padding:25px;
-position:relative
+  width:min(650px,100%);
+  background:#111016;
+  border:1px solid #9c5fce;
+  border-radius:22px;
+  padding:25px;
+  position:relative;
 }
 
 .close{
-position:absolute;
-left:18px;
-top:10px;
-background:none;
-border:0;
-color:#aaa;
-font-size:30px;
-cursor:pointer
+  position:absolute;
+  left:18px;
+  top:10px;
+  border:0;
+  background:none;
+  color:#aaa;
+  font-size:30px;
+  cursor:pointer;
 }
 
 .selected{
-background:#0b0a0f;
-border:1px solid #33233e;
-padding:15px;
-border-radius:12px;
-margin:15px 0;
-color:#c08cff
+  background:#09080d;
+  border:1px solid #33233d;
+  padding:16px;
+  border-radius:13px;
+  margin:18px 0;
+}
+
+.selected strong{
+  color:#c18bff;
 }
 
 label{
-display:block;
-margin:13px 0 6px;
-color:#ddd
+  display:block;
+  margin:13px 0 6px;
 }
 
 input,select{
-width:100%;
-padding:14px;
-border-radius:12px;
-border:1px solid #3a2a45;
-background:#09080d;
-color:white;
-font-size:16px;
-outline:none
+  width:100%;
+  padding:14px;
+  background:#09080d;
+  color:#fff;
+  border:1px solid #392a45;
+  border-radius:12px;
+  font-size:16px;
+  outline:none;
 }
 
 input:focus,select:focus{
-border-color:#b477ff
-}
-
-.form-note{
-color:#aaa;
-font-size:13px;
-margin-top:12px
+  border-color:#b477ff;
 }
 
 .whatsapp{
-width:100%;
-margin-top:18px;
-padding:15px;
-border:0;
-border-radius:13px;
-background:#20d66b;
-color:#04140a;
-font-size:17px;
-font-weight:bold;
-cursor:pointer
+  width:100%;
+  margin-top:20px;
+  padding:15px;
+  border:0;
+  border-radius:13px;
+  background:#20d66b;
+  color:#031209;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.facebook{
-display:inline-block;
-margin-top:20px;
-color:#b477ff;
-border-bottom:1px solid #b477ff
+.note{
+  color:#aaa;
+  font-size:13px;
+  margin-top:12px;
+}
+
+.info{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.info-card{
+  background:#111016;
+  border:1px solid #30233b;
+  border-radius:18px;
+  padding:22px;
+}
+
+.info-card h3{
+  color:#c18bff;
+  margin-bottom:8px;
+}
+
+.facebook,
+.whatsapp-link{
+  display:inline-block;
+  margin-top:15px;
+  color:#bd86ff;
 }
 
 footer{
-text-align:center;
-padding:35px 20px;
-border-top:1px solid #241c2c;
-color:#888
+  text-align:center;
+  color:#888;
+  border-top:1px solid #251c2d;
+  padding:35px 20px;
 }
 
 @media(max-width:700px){
 
-.nav{
-align-items:flex-start
-}
+  .nav{
+    align-items:flex-start;
+  }
 
-nav{
-gap:12px;
-justify-content:flex-end
-}
+  nav{
+    gap:10px;
+    justify-content:flex-end;
+  }
 
-.hero{
-min-height:570px
-}
-
-.pay-row{
-flex-direction:column;
-align-items:stretch;
-text-align:center
-}
-
+  .pay{
+    flex-direction:column;
+    text-align:center;
+  }
 }
 </style>
 </head>
+
 
 <body>
 
@@ -396,7 +391,7 @@ text-align:center
 
 <div class="nav">
 
-<a class="logo" href="#home">
+<a href="#home" class="logo">
 NOX
 <span>BOOKS</span>
 </a>
@@ -404,8 +399,8 @@ NOX
 <nav>
 <a href="#home">الرئيسية</a>
 <a href="#books">الكتب</a>
+<a href="#payment">الدفع</a>
 <a href="#about">حول نوكس</a>
-<a href="#payment">طرق الدفع</a>
 <a href="#contact">تواصل معنا</a>
 </nav>
 
@@ -414,11 +409,9 @@ NOX
 </header>
 
 
-<main id="home">
+<section class="hero" id="home">
 
-<section class="hero">
-
-<div class="hero-inner">
+<div class="hero-content">
 
 <div class="badge">
 NOX BOOKS
@@ -434,11 +427,11 @@ NOX BOOKS
 واقرأ أعمال الكاتب مصطفى حبيشي.
 </p>
 
-<a class="btn primary" href="#books">
+<a href="#books" class="btn primary">
 استكشف الكتب
 </a>
 
-<a class="btn" href="#about">
+<a href="#about" class="btn">
 اعرف المزيد
 </a>
 
@@ -449,127 +442,95 @@ NOX BOOKS
 
 <section id="books">
 
-<h2 class="section-title">
+<h2 class="title">
 الكتب <span>المتاحة</span>
 </h2>
 
-<div class="books" id="booksList"></div>
-
-</section>
-
-
-<section id="about">
-
-<h2 class="section-title">
-حول <span>نوكس</span>
-</h2>
-
-<div class="info">
-
-<div class="info-card">
-
-<h3>
-NOX BOOKS
-</h3>
-
-<p>
-مكتبة رقمية لعرض وبيع الكتب والأعمال الأدبية
-من تأليف مصطفى حبيشي.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>
-شراء بسيط
-</h3>
-
-<p>
-اختر الكتاب، حوّل قيمة الكتاب،
-ثم أرسل بيانات العملية عبر واتساب للمراجعة.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>
-كتب متعددة
-</h3>
-
-<p>
-يمكن إضافة عدد كبير من الكتب،
-وكل كتاب له اسم وسعر وملف PDF مستقل.
-</p>
-
-</div>
-
-</div>
+<div class="books" id="booksContainer"></div>
 
 </section>
 
 
 <section id="payment">
 
-<h2 class="section-title">
+<h2 class="title">
 طرق <span>الدفع</span>
 </h2>
 
 <div class="payment">
 
-<div class="pay-row">
+<div class="pay">
 
 <div>
-
 <strong>InstaPay</strong>
-
 <br>
-
-<span class="pay-number">
-01550371575
-</span>
-
+<span class="number">01550371575</span>
 </div>
 
 <button class="copy"
-onclick="copyText('01550371575')">
+onclick="copyNumber('01550371575')">
 نسخ
 </button>
 
 </div>
 
 
-<div class="pay-row">
+<div class="pay">
 
 <div>
-
 <strong>Orange Cash</strong>
-
 <br>
-
-<span class="pay-number">
-01278899131
-</span>
-
+<span class="number">01278899131</span>
 </div>
 
 <button class="copy"
-onclick="copyText('01278899131')">
+onclick="copyNumber('01278899131')">
 نسخ
 </button>
 
 </div>
-
 
 <p style="color:#aaa;margin-top:15px">
-
-بعد التحويل اضغط «شراء الكتاب»
-وأرسل رقم عملية التحويل من خلال النموذج.
-
+حوّل قيمة الكتاب إلى إحدى طرق الدفع،
+ثم أرسل بيانات العملية من نموذج الشراء.
 </p>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<h2 class="title">
+حول <span>نوكس</span>
+</h2>
+
+<div class="info">
+
+<div class="info-card">
+<h3>NOX BOOKS</h3>
+<p>
+مكتبة رقمية لعرض وبيع الأعمال الأدبية
+من تأليف مصطفى حبيشي.
+</p>
+</div>
+
+<div class="info-card">
+<h3>كتب متعددة</h3>
+<p>
+كل كتاب له اسمه وسعره الخاص،
+ويمكن إضافة كتب جديدة في أي وقت.
+</p>
+</div>
+
+<div class="info-card">
+<h3>طلب الشراء</h3>
+<p>
+اختر الكتاب ثم أدخل بياناتك ورقم عملية
+التحويل وسيتم إرسال الطلب عبر واتساب.
+</p>
+</div>
 
 </div>
 
@@ -578,13 +539,9 @@ onclick="copyText('01278899131')">
 
 <section id="contact" style="text-align:center">
 
-<h2 class="section-title">
+<h2 class="title">
 تواصل <span>معنا</span>
 </h2>
-
-<p style="color:#aaa">
-للاستفسارات ومتابعة طلبات الشراء.
-</p>
 
 <a class="facebook"
 href="https://www.facebook.com/share/1F68ehvfoR/"
@@ -594,7 +551,7 @@ target="_blank">
 
 <br>
 
-<a class="facebook"
+<a class="whatsapp-link"
 href="https://wa.me/201550371575"
 target="_blank">
 واتساب: 01550371575
@@ -602,45 +559,42 @@ target="_blank">
 
 </section>
 
-</main>
-
 
 <footer>
-
 © 2026 NOX BOOKS — Mostafa Hebieshy
-
 </footer>
 
+
+
+<!-- نافذة شراء الكتاب -->
 
 <div class="modal" id="buyModal">
 
 <div class="modal-box">
 
 <button class="close"
-onclick="closeModal()">
+onclick="closeBuy()">
 ×
 </button>
 
 <h2>
-شراء الكتاب
+🛒 شراء الكتاب
 </h2>
 
 <p style="color:#aaa">
-أدخل بياناتك بعد إتمام التحويل.
+أتمم التحويل أولًا ثم أرسل بيانات العملية.
 </p>
 
 
 <div class="selected">
 
-<div>
 الكتاب:
-<strong id="selectedBook">-</strong>
-</div>
+<strong id="bookName">-</strong>
 
-<div>
+<br>
+
 السعر:
-<strong id="selectedPrice">-</strong>
-</div>
+<strong id="bookPrice">-</strong>
 
 </div>
 
@@ -650,7 +604,7 @@ onclick="closeModal()">
 </label>
 
 <select id="bookSelect"
-onchange="updateSelected()">
+onchange="changeBook()">
 </select>
 
 
@@ -670,20 +624,9 @@ placeholder="اكتب اسمك بالكامل"
 </label>
 
 <input
-id="customerWhatsApp"
+id="customerPhone"
 type="tel"
-placeholder="مثال: 015xxxxxxxx"
->
-
-
-<label>
-رقم عملية التحويل
-</label>
-
-<input
-id="transferNumber"
-type="text"
-placeholder="اكتب رقم العملية"
+placeholder="015xxxxxxxx"
 >
 
 
@@ -704,17 +647,25 @@ Orange Cash
 </select>
 
 
-<p class="form-note">
+<label>
+رقم عملية التحويل
+</label>
 
-سيتم فتح واتساب برسالة جاهزة تحتوي
-على اسم الكتاب والسعر وبيانات المشتري
-ورقم عملية التحويل.
+<input
+id="transferNumber"
+type="text"
+placeholder="اكتب رقم العملية"
+>
 
+
+<p class="note">
+بعد إرسال الطلب سيتم فتح محادثة واتساب مع صاحب المكتبة
+لمراجعة الدفع وتسليم الكتاب.
 </p>
 
 
 <button class="whatsapp"
-onclick="sendOrder()">
+onclick="sendWhatsApp()">
 
 📲 إرسال طلب الشراء على واتساب
 
@@ -725,235 +676,236 @@ onclick="sendOrder()">
 </div>
 
 
+
 <script>
 
-/*
-====================================================
-قائمة الكتب
-====================================================
+/* =========================================
+   بيانات الكتب
+   =========================================
 
-لإضافة كتاب جديد، انسخ السطر الموجود
-وأضف كتابك الجديد.
+   لإضافة كتاب جديد، انسخ كتابًا من القائمة
+   وضع كتابًا آخر.
 
-name = اسم الكتاب
-price = سعر الكتاب
-pdf = اسم ملف PDF داخل المستودع
+   name  = اسم الكتاب
+   price = السعر
+   pdf   = اسم ملف PDF الموجود في GitHub
 
-====================================================
-*/
+   ========================================= */
+
 
 const books = [
 
-{
-name:"الغرفة التي لم تُبنَ قط",
-price:200,
-pdf:"الغرفة التي لم تبتكر.pdf"
-}
+  {
+    name: "الغرفة التي لم تُبنَ قط",
+    price: 200,
+    pdf: "الغرفة التي لم تبتكر.pdf"
+  }
+
+  /*
+
+  مثال لإضافة كتاب ثانٍ:
+
+  ,
+  {
+    name: "اسم الكتاب الثاني",
+    price: 150,
+    pdf: "اسم-الملف-الثاني.pdf"
+  }
+
+  */
 
 ];
 
 
-/*
-رقم واتساب صاحب المكتبة
-*/
+/* رقم واتساب */
 
-const whatsappNumber="201550371575";
+const ownerWhatsApp = "201550371575";
 
 
-const booksList=
-document.getElementById("booksList");
+const container =
+document.getElementById("booksContainer");
 
-const bookSelect=
+const select =
 document.getElementById("bookSelect");
 
 
-function renderBooks(){
+/* عرض الكتب */
 
-booksList.innerHTML="";
+function displayBooks(){
 
-bookSelect.innerHTML="";
+  container.innerHTML = "";
+  select.innerHTML = "";
 
+  books.forEach((book,index)=>{
 
-books.forEach((book,index)=>{
+    const card =
+    document.createElement("div");
 
-const card=
-document.createElement("article");
+    card.className = "book";
 
-card.className="book";
+    card.innerHTML = `
 
+      <div class="cover">
 
-card.innerHTML=`
+        <h3>
+          ${book.name}
+        </h3>
 
-<div class="cover">
+      </div>
 
-<h3>
-${book.name}
-</h3>
+      <div class="book-body">
 
-</div>
+        <h3>
+          ${book.name}
+        </h3>
 
+        <p>
+          نسخة رقمية PDF
+        </p>
 
-<div class="book-body">
+        <div class="price">
+          ${book.price} جنيه
+        </div>
 
-<h3>
-${book.name}
-</h3>
+        <button class="buy"
+        onclick="openBuy(${index})">
 
-<p>
-نسخة رقمية PDF — التسليم بعد مراجعة الدفع.
-</p>
+          🛒 شراء الكتاب
 
-<div class="price">
-${book.price} جنيه
-</div>
+        </button>
 
-<button class="buy-btn"
-onclick="openModal(${index})">
+      </div>
 
-🛒 شراء الكتاب
+    `;
 
-</button>
-
-</div>
-
-`;
-
-
-booksList.appendChild(card);
+    container.appendChild(card);
 
 
-const option=
-document.createElement("option");
+    const option =
+    document.createElement("option");
 
-option.value=index;
+    option.value = index;
 
-option.textContent=
-book.name+" — "+book.price+" جنيه";
+    option.textContent =
+    book.name +
+    " — " +
+    book.price +
+    " جنيه";
 
-bookSelect.appendChild(option);
+    select.appendChild(option);
 
-});
-
-}
-
-
-/*
-فتح نموذج الشراء
-*/
-
-function openModal(index){
-
-bookSelect.value=index;
-
-updateSelected();
-
-document
-.getElementById("buyModal")
-.classList.add("show");
-
-document.body.style.overflow="hidden";
+  });
 
 }
 
 
-/*
-إغلاق نموذج الشراء
-*/
+/* فتح نموذج الشراء */
 
-function closeModal(){
+function openBuy(index){
 
-document
-.getElementById("buyModal")
-.classList.remove("show");
+  select.value = index;
 
-document.body.style.overflow="";
+  changeBook();
 
-}
+  document
+  .getElementById("buyModal")
+  .classList.add("active");
 
-
-/*
-تحديث اسم الكتاب والسعر
-*/
-
-function updateSelected(){
-
-const book=
-books[Number(bookSelect.value)];
-
-if(!book)return;
-
-document
-.getElementById("selectedBook")
-.textContent=book.name;
-
-document
-.getElementById("selectedPrice")
-.textContent=
-book.price+" جنيه";
+  document.body.style.overflow = "hidden";
 
 }
 
 
-/*
-إرسال الطلب إلى واتساب
-*/
+/* إغلاق نموذج الشراء */
 
-function sendOrder(){
+function closeBuy(){
 
-const book=
-books[Number(bookSelect.value)];
+  document
+  .getElementById("buyModal")
+  .classList.remove("active");
 
-const name=
-document
-.getElementById("customerName")
-.value.trim();
-
-const customerWhatsApp=
-document
-.getElementById("customerWhatsApp")
-.value.trim();
-
-const transfer=
-document
-.getElementById("transferNumber")
-.value.trim();
-
-const method=
-document
-.getElementById("paymentMethod")
-.value;
-
-
-if(!name){
-
-alert("اكتب الاسم بالكامل");
-
-return;
+  document.body.style.overflow = "";
 
 }
 
 
-if(!customerWhatsApp){
+/* تغيير الكتاب */
 
-alert("اكتب رقم واتساب");
+function changeBook(){
 
-return;
+  const book =
+  books[Number(select.value)];
+
+  if(!book)return;
+
+  document
+  .getElementById("bookName")
+  .textContent =
+  book.name;
+
+  document
+  .getElementById("bookPrice")
+  .textContent =
+  book.price + " جنيه";
 
 }
 
 
-if(!transfer){
+/* إرسال الطلب للواتساب */
 
-alert("اكتب رقم عملية التحويل");
+function sendWhatsApp(){
 
-return;
+  const book =
+  books[Number(select.value)];
 
-}
+  const name =
+  document
+  .getElementById("customerName")
+  .value.trim();
+
+  const phone =
+  document
+  .getElementById("customerPhone")
+  .value.trim();
+
+  const method =
+  document
+  .getElementById("paymentMethod")
+  .value;
+
+  const transfer =
+  document
+  .getElementById("transferNumber")
+  .value.trim();
 
 
-const message=
+  if(!name){
 
-`📚 طلب شراء جديد — NOX BOOKS
+    alert("اكتب اسمك بالكامل");
+
+    return;
+  }
+
+
+  if(!phone){
+
+    alert("اكتب رقم واتساب");
+
+    return;
+  }
+
+
+  if(!transfer){
+
+    alert("اكتب رقم عملية التحويل");
+
+    return;
+  }
+
+
+  const message =
+
+`📚 طلب شراء من NOX BOOKS
 
 📖 اسم الكتاب:
 ${book.name}
@@ -965,7 +917,7 @@ ${book.price} جنيه
 ${name}
 
 📱 رقم واتساب المشتري:
-${customerWhatsApp}
+${phone}
 
 💳 طريقة الدفع:
 ${method}
@@ -973,66 +925,59 @@ ${method}
 🔢 رقم عملية التحويل:
 ${transfer}
 
-أرغب في استلام نسخة PDF بعد مراجعة عملية الدفع.`;
+أرغب في استلام نسخة PDF من الكتاب بعد مراجعة عملية الدفع.`;
 
 
-window.open(
+  const url =
+  "https://wa.me/" +
+  ownerWhatsApp +
+  "?text=" +
+  encodeURIComponent(message);
 
-"https://wa.me/"
-+
-whatsappNumber
-+
-"?text="
-+
-encodeURIComponent(message),
 
-"_blank"
-
-);
+  window.open(url,"_blank");
 
 }
 
 
-/*
-نسخ أرقام الدفع
-*/
+/* نسخ رقم الدفع */
 
-function copyText(text){
+function copyNumber(number){
 
-navigator.clipboard
-.writeText(text)
-.then(()=>{
+  navigator.clipboard
+  .writeText(number)
+  .then(()=>{
 
-alert("تم نسخ الرقم");
+    alert("تم نسخ الرقم");
 
-})
-.catch(()=>{
+  })
+  .catch(()=>{
 
-alert("الرقم: "+text);
+    alert("الرقم: " + number);
 
-});
+  });
 
 }
 
 
-/*
-إغلاق النافذة عند الضغط خارجها
-*/
+/* إغلاق النافذة بالضغط خارجها */
 
 document
 .getElementById("buyModal")
 .addEventListener("click",function(e){
 
-if(e.target===this){
+  if(e.target === this){
 
-closeModal();
+    closeBuy();
 
-}
+  }
 
 });
 
 
-renderBooks();
+/* تشغيل الموقع */
+
+displayBooks();
 
 </script>
 
