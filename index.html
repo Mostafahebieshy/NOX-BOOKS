@@ -4,266 +4,384 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NOX BOOKS | مكتبة Mostafa Hebieshy</title>
+<title>NOX BOOKS | مكتبة مصطفى حبيشي</title>
 
-<meta name="description" content="NOX BOOKS - المكتبة الرقمية للكاتب Mostafa Hebieshy">
+<meta name="description" content="NOX BOOKS - مكتبة رقمية من تأليف مصطفى حبيشي.">
 
 <style>
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
 body{
-    margin:0;
     font-family:Arial,Tahoma,sans-serif;
-    background:#08070b;
+    background:#09080d;
     color:#fff;
     line-height:1.8;
 }
 
 header{
+    background:#050509;
+    border-bottom:1px solid #30253c;
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(8,7,11,.97);
-    border-bottom:1px solid #292331;
 }
 
 .nav{
-    max-width:1150px;
+    max-width:1100px;
     margin:auto;
-    padding:15px 20px;
+    min-height:75px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    padding:10px 20px;
 }
 
 .logo{
-    font-size:30px;
-    font-weight:900;
+    font-size:27px;
+    font-weight:bold;
     letter-spacing:3px;
 }
 
-.logo span{color:#a855f7}
-
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    gap:18px;
+.logo span{
+    color:#b57cff;
 }
 
 nav a{
-    color:#ddd;
+    color:#fff;
     text-decoration:none;
+    margin:0 8px;
+    font-size:15px;
 }
 
-nav a:hover{color:#b86cff}
+nav a:hover{
+    color:#b57cff;
+}
 
 .hero{
+    min-height:560px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:80px 20px;
+    padding:70px 20px;
     background:
-    radial-gradient(circle at center,#24162f 0%,#0d0b10 55%,#08070b 100%);
+    radial-gradient(circle at center,#21152f 0%,#0b0a10 55%,#050509 100%);
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid #9b5de5;
+    border-radius:30px;
+    padding:8px 28px;
+    color:#c18cff;
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:55px;
-    margin:0 0 15px;
+    font-size:60px;
+    margin-bottom:15px;
 }
 
-.hero h1 span{color:#a855f7}
+.hero h1 span{
+    color:#b57cff;
+}
 
 .hero p{
-    max-width:700px;
-    margin:auto;
-    color:#bbb;
-    font-size:19px;
+    color:#c9c5cd;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    border:none;
+    border-radius:35px;
+    padding:14px 30px;
+    background:#b57cff;
+    color:#100b16;
+    font-weight:bold;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:17px;
+}
+
+.btn:hover{
+    background:#ca9cff;
 }
 
 section{
-    max-width:1150px;
+    max-width:1100px;
     margin:auto;
     padding:70px 20px;
 }
 
-.title{
+.section-title{
     text-align:center;
-    font-size:36px;
+    font-size:35px;
     margin-bottom:45px;
+}
+
+.section-title span{
+    color:#b57cff;
 }
 
 .books{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
 }
 
 .book{
-    background:#141118;
-    border:1px solid #30273a;
-    border-radius:18px;
+    background:#111016;
+    border:1px solid #30263b;
+    border-radius:20px;
     overflow:hidden;
-    box-shadow:0 12px 35px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+.book:hover{
+    transform:translateY(-5px);
+    border-color:#9c63d7;
 }
 
 .cover{
     width:100%;
-    height:470px;
-    object-fit:contain;
-    background:#050505;
+    height:420px;
+    object-fit:cover;
     display:block;
+    background:#18151d;
 }
 
 .book-info{
     padding:25px;
 }
 
-.book h2{
+.book-info h3{
     font-size:25px;
-    margin-top:0;
+    margin-bottom:10px;
 }
 
-.book p{
-    color:#aaa;
+.book-info p{
+    color:#aaa5b0;
+    min-height:75px;
 }
 
 .price{
-    color:#bd72ff;
-    font-size:29px;
+    font-size:28px;
+    color:#bd85ff;
     font-weight:bold;
-    margin:18px 0;
+    margin:15px 0;
 }
 
-.buy{
+.buy-btn{
     width:100%;
-    border:0;
-    padding:15px;
-    border-radius:10px;
-    background:#a855f7;
-    color:#fff;
-    font-size:18px;
+    border:none;
+    border-radius:30px;
+    padding:14px;
+    background:#b57cff;
+    color:#100b16;
+    font-size:17px;
     font-weight:bold;
     cursor:pointer;
 }
 
-.buy:hover{background:#9333ea}
-
-.payment-box{
-    max-width:750px;
-    margin:auto;
-    background:#141118;
-    border:1px solid #30273a;
-    border-radius:18px;
-    padding:30px;
+.buy-btn:hover{
+    background:#cfabff;
 }
 
 .payment{
-    background:#0c0b10;
-    border:1px solid #33283d;
-    border-radius:12px;
-    padding:18px;
-    margin-bottom:15px;
+    background:#111016;
+    border:1px solid #30263b;
+    border-radius:22px;
+    padding:30px;
+    max-width:750px;
+    margin:auto;
 }
 
-.payment strong{
-    color:#bd72ff;
+.payment-method{
+    background:#0a090e;
+    border:1px solid #352942;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
 }
 
-.payment-number{
+.payment-method h3{
+    margin-bottom:10px;
+}
+
+.number{
+    color:#b57cff;
+    font-size:22px;
+    font-weight:bold;
     direction:ltr;
     display:inline-block;
-    font-size:21px;
-    font-weight:bold;
+}
+
+.copy-btn{
     margin-right:10px;
+    background:#261b31;
+    border:none;
+    color:#fff;
+    padding:7px 15px;
+    border-radius:8px;
+    cursor:pointer;
 }
 
 .form-group{
-    margin-top:18px;
+    margin-bottom:18px;
 }
 
 label{
     display:block;
     margin-bottom:7px;
+    color:#ddd;
 }
 
 input,select{
     width:100%;
-    padding:14px;
-    border-radius:10px;
-    border:1px solid #42354c;
-    background:#09080c;
+    padding:15px;
+    border-radius:12px;
+    border:1px solid #453451;
+    background:#08070b;
     color:#fff;
     font-size:16px;
+    outline:none;
 }
 
 input:focus,select:focus{
-    outline:none;
-    border-color:#a855f7;
+    border-color:#b57cff;
 }
 
-.selected{
-    background:#21152b;
-    border:1px solid #704497;
-    border-radius:10px;
+.selected-book{
+    background:#1b1422;
+    border:1px solid #71489b;
+    border-radius:12px;
     padding:15px;
-    margin-top:20px;
+    margin-bottom:20px;
 }
 
-.selected span{
-    color:#c183f5;
-    font-weight:bold;
+.selected-book strong{
+    color:#c18cff;
 }
 
 .whatsapp{
     width:100%;
-    border:0;
-    margin-top:22px;
     padding:16px;
-    border-radius:12px;
-    background:#25d366;
-    color:#061008;
+    border:none;
+    border-radius:30px;
+    background:#20d366;
+    color:#071108;
     font-size:18px;
     font-weight:bold;
     cursor:pointer;
 }
 
-.whatsapp:hover{background:#1ebe5d}
+.whatsapp:hover{
+    background:#39e879;
+}
 
-.facebook{
-    display:inline-block;
-    margin-top:20px;
-    padding:13px 28px;
-    border-radius:10px;
-    background:#1877f2;
-    color:#fff;
-    text-decoration:none;
+.note{
+    color:#aaa;
+    font-size:14px;
+    text-align:center;
+    margin-top:15px;
+}
+
+.about{
+    text-align:center;
+    max-width:800px;
+}
+
+.about p{
+    color:#bbb6c0;
+    font-size:17px;
 }
 
 footer{
+    background:#050509;
+    border-top:1px solid #30253c;
     text-align:center;
     padding:35px 20px;
-    border-top:1px solid #292331;
-    background:#050509;
-    color:#888;
+    color:#aaa;
 }
 
-footer span{color:#a855f7}
+footer strong{
+    color:#b57cff;
+}
+
+.social{
+    margin-top:15px;
+}
+
+.social a{
+    color:#b57cff;
+    text-decoration:none;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.82);
+    z-index:2000;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal-box{
+    background:#111016;
+    border:1px solid #60417b;
+    border-radius:20px;
+    max-width:750px;
+    width:100%;
+    max-height:90vh;
+    overflow:auto;
+    padding:30px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    left:20px;
+    top:15px;
+    font-size:30px;
+    color:#aaa;
+    cursor:pointer;
+}
 
 @media(max-width:700px){
 
     .nav{
         flex-direction:column;
+        gap:10px;
     }
 
     .hero h1{
-        font-size:40px;
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
     }
 
     .cover{
-        height:420px;
+        height:400px;
     }
 
+    nav a{
+        font-size:13px;
+        margin:3px;
+    }
 }
 </style>
 </head>
@@ -271,352 +389,410 @@ footer span{color:#a855f7}
 <body>
 
 <header>
+    <div class="nav">
 
-<div class="nav">
+        <div class="logo">
+            NOX <span>BOOKS</span>
+        </div>
 
-<div class="logo">
-NOX <span>BOOKS</span>
-</div>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#books">الكتب</a>
+            <a href="#about">عن نوكس</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
 
-<nav>
-<a href="#home">الرئيسية</a>
-<a href="#books">الكتب</a>
-<a href="#payment">الدفع والشراء</a>
-<a href="#contact">تواصل معنا</a>
-</nav>
-
-</div>
-
+    </div>
 </header>
 
 
 <section class="hero" id="home">
 
-<h1>
-مرحبًا بك في <span>NOX BOOKS</span>
-</h1>
+    <div class="hero-content">
 
-<p>
-المكتبة الرقمية للكاتب Mostafa Hebieshy.
-اكتشف أعمال الغموض والرعب النفسي واقرأ القصص التي تأخذك إلى أماكن غير متوقعة.
-</p>
+        <div class="badge">NOX BOOKS</div>
+
+        <h1>
+            كتب <span>نوكس</span>
+        </h1>
+
+        <p>
+            حيث يخفي كل كتاب سرًا.
+        </p>
+
+        <p>
+            اكتشف عالمًا من الغموض والرعب والتشويق،
+            واقرأ أعمال الكاتب مصطفى حبيشي
+            في تجربة رقمية مختلفة.
+        </p>
+
+        <a href="#books" class="btn">
+            استكشف الكتب
+        </a>
+
+    </div>
 
 </section>
 
 
 <section id="books">
 
-<h2 class="title">
-📚 الكتب
-</h2>
+    <h2 class="section-title">
+        <span>الكتب</span>
+    </h2>
 
-<div class="books">
-
-
-<!-- الكتاب الأول -->
-
-<article class="book">
-
-<img
-class="cover"
-src="file_0000000f12082439732e657ef6e88b6.png"
-alt="The Room That Was Never Built"
->
-
-<div class="book-info">
-
-<h2>
-The Room That Was Never Built
-</h2>
-
-<p>
-English psychological mystery and horror novel
-by Mostafa Hebieshy.
-</p>
-
-<div class="price">
-350 جنيه
-</div>
-
-<button
-class="buy"
-onclick="selectBook('The Room That Was Never Built',350)"
->
-🛒 شراء الكتاب
-</button>
-
-</div>
-
-</article>
+    <div class="books">
 
 
-<!-- الكتاب الثاني -->
+        <!-- الكتاب العربي -->
 
-<article class="book">
+        <div class="book">
 
-<img
-class="cover"
-src="file_00000000038c81f6b32e68919110f312.png"
-alt="الغرفة التي لم تُبنَ أبدًا"
->
+            <img
+                class="cover"
+                src="file_00000000038c81f6b32e68919110f312.png"
+                alt="غلاف الغرفة التي لم تُبنَ أبدًا"
+            >
 
-<div class="book-info">
+            <div class="book-info">
 
-<h2>
-الغرفة التي لم تُبنَ أبدًا
-</h2>
+                <h3>
+                    الغرفة التي لم تُبنَ أبدًا
+                </h3>
 
-<p>
-النسخة العربية من رواية الغموض والرعب النفسي
-من تأليف Mostafa Hebieshy.
-</p>
+                <p>
+                    رواية غموض ورعب نفسي تأخذك إلى مبنى
+                    لا ينبغي أن يكون موجودًا، وغرفة لم تُبنَ قط.
+                </p>
 
-<div class="price">
-200 جنيه
-</div>
+                <div class="price">
+                    200 جنيه
+                </div>
 
-<button
-class="buy"
-onclick="selectBook('الغرفة التي لم تُبنَ أبدًا',200)"
->
-🛒 شراء الكتاب
-</button>
+                <button
+                    class="buy-btn"
+                    onclick="openOrder(
+                        'الغرفة التي لم تُبنَ أبدًا',
+                        200
+                    )"
+                >
+                    🛒 شراء الكتاب
+                </button>
 
-</div>
+            </div>
 
-</article>
+        </div>
 
 
-</div>
+        <!-- الكتاب الإنجليزي -->
+
+        <div class="book">
+
+            <img
+                class="cover"
+                src="file_0000000f12082439732e657ef6e88b6.png"
+                alt="The Room That Was Never Built"
+            >
+
+            <div class="book-info">
+
+                <h3>
+                    The Room That Was Never Built
+                </h3>
+
+                <p>
+                    An English psychological mystery
+                    about a room that should never have existed.
+                </p>
+
+                <div class="price">
+                    350 جنيه
+                </div>
+
+                <button
+                    class="buy-btn"
+                    onclick="openOrder(
+                        'The Room That Was Never Built',
+                        350
+                    )"
+                >
+                    🛒 شراء الكتاب
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<section id="payment">
+<section id="about">
 
-<h2 class="title">
-💳 الدفع وشراء الكتب
-</h2>
+    <h2 class="section-title">
+        عن <span>NOX BOOKS</span>
+    </h2>
 
-<div class="payment-box">
+    <div class="about">
 
+        <p>
+            NOX BOOKS هي مكتبة رقمية لأعمال الكاتب
+            مصطفى حبيشي، تجمع بين الغموض والرعب النفسي
+            والقصص المختلفة في تجربة قراءة رقمية بسيطة.
+        </p>
 
-<div class="payment">
-
-<strong>InstaPay</strong>
-
-<span class="payment-number">
-01550371575
-</span>
-
-</div>
-
-
-<div class="payment">
-
-<strong>Orange Cash</strong>
-
-<span class="payment-number">
-01278899131
-</span>
-
-</div>
-
-
-<div class="selected">
-
-الكتاب المختار:
-<span id="selectedBook">
-لم يتم اختيار كتاب
-</span>
-
-<br>
-
-السعر:
-<span id="selectedPrice">
--
-</span>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-اسم الكتاب
-</label>
-
-<select id="bookSelect" onchange="changeBook()">
-
-<option value="">
-اختر الكتاب
-</option>
-
-<option value="The Room That Was Never Built" data-price="350">
-The Room That Was Never Built — 350 جنيه
-</option>
-
-<option value="الغرفة التي لم تُبنَ أبدًا" data-price="200">
-الغرفة التي لم تُبنَ أبدًا — 200 جنيه
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-اسم المشتري
-</label>
-
-<input
-type="text"
-id="customerName"
-placeholder="اكتب اسمك بالكامل"
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-رقم الهاتف
-</label>
-
-<input
-type="tel"
-id="customerPhone"
-placeholder="اكتب رقم هاتفك"
->
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-طريقة الدفع
-</label>
-
-<select id="paymentMethod">
-
-<option value="">
-اختر طريقة الدفع
-</option>
-
-<option value="InstaPay">
-InstaPay
-</option>
-
-<option value="Orange Cash">
-Orange Cash
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-رقم عملية التحويل
-</label>
-
-<input
-type="text"
-id="transaction"
-placeholder="اكتب رقم العملية بعد الدفع"
->
-
-</div>
-
-
-<button
-class="whatsapp"
-onclick="sendOrder()"
->
-📱 إرسال طلب الشراء إلى واتساب
-</button>
-
-</div>
+    </div>
 
 </section>
 
 
 <section id="contact">
 
-<h2 class="title">
-📞 تواصل معنا
-</h2>
+    <h2 class="section-title">
+        <span>شراء كتاب</span>
+    </h2>
 
-<div style="text-align:center">
+    <div class="payment">
 
-<p>
-للاستفسار أو متابعة أعمال الكاتب:
-</p>
+        <div class="payment-method">
 
-<a
-class="facebook"
-href="https://www.facebook.com/share/1F68ehvfoR/"
-target="_blank"
-rel="noopener"
->
-🔵 صفحة فيسبوك
-</a>
+            <h3>💳 InstaPay</h3>
 
-<p style="margin-top:25px">
-واتساب:
-<strong style="color:#25d366">
-01550371575
-</strong>
-</p>
+            <span class="number">
+                01550371575
+            </span>
 
-</div>
+            <button
+                class="copy-btn"
+                onclick="copyNumber('01550371575')"
+            >
+                نسخ
+            </button>
+
+        </div>
+
+
+        <div class="payment-method">
+
+            <h3>💳 Orange Cash</h3>
+
+            <span class="number">
+                01278899131
+            </span>
+
+            <button
+                class="copy-btn"
+                onclick="copyNumber('01278899131')"
+            >
+                نسخ
+            </button>
+
+        </div>
+
+
+        <div class="selected-book">
+
+            <strong>الكتاب المختار:</strong>
+
+            <span id="selectedBook">
+                لم يتم اختيار كتاب
+            </span>
+
+            <br>
+
+            <strong>السعر:</strong>
+
+            <span id="selectedPrice">
+                -
+            </span>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                اسم الكتاب
+            </label>
+
+            <select id="bookSelect" onchange="updateBook()">
+
+                <option value="">
+                    اختر الكتاب
+                </option>
+
+                <option
+                    value="الغرفة التي لم تُبنَ أبدًا"
+                    data-price="200"
+                >
+                    الغرفة التي لم تُبنَ أبدًا — 200 جنيه
+                </option>
+
+                <option
+                    value="The Room That Was Never Built"
+                    data-price="350"
+                >
+                    The Room That Was Never Built — 350 جنيه
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                الاسم بالكامل
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="اكتب اسمك بالكامل"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                رقم واتساب
+            </label>
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="مثال: 01000000000"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                طريقة الدفع
+            </label>
+
+            <select id="paymentMethod">
+
+                <option value="">
+                    اختر طريقة الدفع
+                </option>
+
+                <option value="InstaPay">
+                    InstaPay
+                </option>
+
+                <option value="Orange Cash">
+                    Orange Cash
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                رقم عملية التحويل
+            </label>
+
+            <input
+                type="text"
+                id="transaction"
+                placeholder="اكتب رقم العملية بعد التحويل"
+            >
+
+        </div>
+
+
+        <button
+            class="whatsapp"
+            onclick="sendOrder()"
+        >
+            📱 إرسال طلب الشراء على واتساب
+        </button>
+
+
+        <div class="note">
+
+            بعد مراجعة التحويل سيتم التواصل معك
+            وتسليم الكتاب الذي تم شراؤه.
+
+        </div>
+
+    </div>
 
 </section>
 
 
 <footer>
 
-© 2026 NOX BOOKS —
-<span>Mostafa Hebieshy</span>
+    <div>
+        © 2026 <strong>NOX BOOKS</strong>
+    </div>
+
+    <div>
+        جميع الحقوق محفوظة للكاتب
+        <strong>Mostafa Hebieshy</strong>
+    </div>
+
+    <div class="social">
+
+        Facebook:
+        <a
+            href="https://www.facebook.com/share/1F68ehvfoR/"
+            target="_blank"
+        >
+            صفحة الكاتب
+        </a>
+
+    </div>
 
 </footer>
 
 
 <script>
 
-let selectedBook = "";
-let selectedPrice = 0;
+const WHATSAPP = "201550371575";
+
+let currentBook = "";
+let currentPrice = 0;
 
 
-/* اختيار الكتاب */
+/* فتح نموذج شراء الكتاب */
 
-function selectBook(book,price){
+function openOrder(book, price){
 
-    selectedBook = book;
-    selectedPrice = price;
-
-    document.getElementById("bookSelect").value = book;
+    currentBook = book;
+    currentPrice = price;
 
     document.getElementById("selectedBook").textContent = book;
 
     document.getElementById("selectedPrice").textContent =
         price + " جنيه";
 
-    document.getElementById("payment").scrollIntoView({
-        behavior:"smooth"
-    });
+    const select =
+        document.getElementById("bookSelect");
+
+    select.value = book;
+
+    document.getElementById("contact")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
 }
 
 
-/* تغيير الكتاب من الفورم */
+/* تحديث الكتاب من القائمة */
 
-function changeBook(){
+function updateBook(){
 
     const select =
         document.getElementById("bookSelect");
@@ -626,32 +802,43 @@ function changeBook(){
 
     if(!select.value){
 
-        selectedBook = "";
-        selectedPrice = 0;
+        currentBook = "";
+        currentPrice = 0;
 
-        document.getElementById("selectedBook").textContent =
-            "لم يتم اختيار كتاب";
+        document.getElementById("selectedBook")
+            .textContent = "لم يتم اختيار كتاب";
 
-        document.getElementById("selectedPrice").textContent =
-            "-";
+        document.getElementById("selectedPrice")
+            .textContent = "-";
 
         return;
     }
 
-    selectedBook = select.value;
+    currentBook = select.value;
 
-    selectedPrice =
+    currentPrice =
         Number(option.dataset.price);
 
-    document.getElementById("selectedBook").textContent =
-        selectedBook;
+    document.getElementById("selectedBook")
+        .textContent = currentBook;
 
-    document.getElementById("selectedPrice").textContent =
-        selectedPrice + " جنيه";
+    document.getElementById("selectedPrice")
+        .textContent = currentPrice + " جنيه";
 }
 
 
-/* إرسال الطلب */
+/* نسخ رقم الدفع */
+
+function copyNumber(number){
+
+    navigator.clipboard.writeText(number);
+
+    alert("تم نسخ الرقم");
+
+}
+
+
+/* إرسال الطلب إلى واتساب */
 
 function sendOrder(){
 
@@ -668,9 +855,9 @@ function sendOrder(){
         document.getElementById("transaction").value.trim();
 
 
-    if(!selectedBook){
+    if(!currentBook){
 
-        alert("من فضلك اختر الكتاب.");
+        alert("من فضلك اختر الكتاب أولًا.");
 
         return;
     }
@@ -678,7 +865,7 @@ function sendOrder(){
 
     if(!name){
 
-        alert("من فضلك اكتب اسمك.");
+        alert("من فضلك اكتب اسمك بالكامل.");
 
         return;
     }
@@ -686,7 +873,7 @@ function sendOrder(){
 
     if(!phone){
 
-        alert("من فضلك اكتب رقم هاتفك.");
+        alert("من فضلك اكتب رقم واتساب.");
 
         return;
     }
@@ -708,23 +895,19 @@ function sendOrder(){
     }
 
 
-    const whatsappNumber =
-        "201550371575";
-
-
     const message =
 `📚 طلب شراء من NOX BOOKS
 
-📖 الكتاب:
-${selectedBook}
+📖 اسم الكتاب:
+${currentBook}
 
 💰 السعر:
-${selectedPrice} جنيه
+${currentPrice} جنيه
 
-👤 اسم المشتري:
+👤 اسم العميل:
 ${name}
 
-📱 رقم الهاتف:
+📱 رقم واتساب العميل:
 ${phone}
 
 💳 طريقة الدفع:
@@ -736,17 +919,14 @@ ${transaction}
 أرجو مراجعة التحويل وتسليم الكتاب بعد التأكد من الدفع.`;
 
 
-    const whatsappURL =
+    const url =
         "https://wa.me/" +
-        whatsappNumber +
+        WHATSAPP +
         "?text=" +
         encodeURIComponent(message);
 
 
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
+    window.open(url, "_blank");
 
 }
 
