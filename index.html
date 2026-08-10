@@ -445,6 +445,7 @@ NOX
 
 </header>
 
+
 <section class="hero" id="home">
 
 <div class="hero-content">
@@ -475,6 +476,7 @@ NOX BOOKS
 
 </section>
 
+
 <section id="books">
 
 <h2 class="title">
@@ -484,6 +486,7 @@ NOX BOOKS
 <div class="books" id="booksContainer"></div>
 
 </section>
+
 
 <section id="payment">
 
@@ -532,6 +535,7 @@ onclick="copyNumber('01278899131')">
 
 </section>
 
+
 <section id="about">
 
 <h2 class="title">
@@ -577,6 +581,7 @@ NOX BOOKS منصة رقمية لعرض وبيع
 
 </section>
 
+
 <section id="contact" style="text-align:center">
 
 <h2 class="title">
@@ -603,11 +608,13 @@ target="_blank">
 
 </section>
 
+
 <footer>
 
 © 2026 NOX BOOKS — Mostafa Hebieshy
 
 </footer>
+
 
 <!-- نافذة الشراء -->
 
@@ -628,6 +635,7 @@ onclick="closeBuy()">
 أدخل بياناتك بعد إتمام التحويل.
 </p>
 
+
 <div class="selected">
 
 الكتاب:
@@ -640,6 +648,7 @@ onclick="closeBuy()">
 
 </div>
 
+
 <label>
 الكتاب
 </label>
@@ -647,6 +656,7 @@ onclick="closeBuy()">
 <select id="bookSelect"
 onchange="changeBook()">
 </select>
+
 
 <label>
 اسم المشتري
@@ -658,6 +668,7 @@ type="text"
 placeholder="اكتب اسمك بالكامل"
 >
 
+
 <label>
 رقم واتساب
 </label>
@@ -667,6 +678,7 @@ id="customerPhone"
 type="tel"
 placeholder="015xxxxxxxx"
 >
+
 
 <label>
 طريقة الدفع
@@ -684,6 +696,7 @@ Orange Cash
 
 </select>
 
+
 <label>
 رقم عملية التحويل
 </label>
@@ -694,12 +707,14 @@ type="text"
 placeholder="اكتب رقم العملية"
 >
 
+
 <p class="note">
 
 بعد إرسال الطلب سيتم فتح واتساب لإرسال
 بيانات الطلب إلى إدارة NOX BOOKS.
 
 </p>
+
 
 <button class="whatsapp"
 onclick="sendWhatsApp()">
@@ -712,14 +727,17 @@ onclick="sendWhatsApp()">
 
 </div>
 
+
+
 <script>
 
 /*
 ==================================================
-الكتب
+NOX BOOKS
+قائمة الكتب
 ==================================================
 
-الكتب الموجودة حاليًا:
+الكتب الحالية:
 
 1 - الغرفة التي لم تُبنَ قط
 السعر: 200 جنيه
@@ -739,6 +757,7 @@ onclick="sendWhatsApp()">
 ==================================================
 */
 
+
 const books = [
 
 /* الكتاب العربي */
@@ -751,6 +770,7 @@ pdf:"الغرفة التي لم تبتكر.pdf",
 english:false
 },
 
+
 /* الكتاب الإنجليزي */
 
 {
@@ -761,15 +781,17 @@ pdf:"The Room That Was Never Built.pdf",
 english:true
 },
 
+
 /* ملف 001700 - الجزء الأول */
 
 {
 name:"ملف 001700 - الجزء الأول",
 price:100,
 language:"العربية",
-pdf:"ملف 001700 - 1 - الجزء الأول.pdf",
+pdf:"ملف 001700 - 1- الجزء الأول.pdf",
 english:false
 },
+
 
 /* ملف 001700 - الجزء الثاني */
 
@@ -777,9 +799,10 @@ english:false
 name:"ملف 001700 - الجزء الثاني",
 price:100,
 language:"العربية",
-pdf:"ملف 001700 - 1 - الجزء الثاني.pdf",
+pdf:"ملف 001700 - 1- الجزء الثاني.pdf",
 english:false
 },
+
 
 /* ملف 001700 - الجزء الثالث */
 
@@ -787,19 +810,14 @@ english:false
 name:"ملف 001700 - الجزء الثالث",
 price:100,
 language:"العربية",
-pdf:"ملف 001700 - 1 - الجزء الثالث.pdf",
+pdf:"ملف 001700 - 1- الجزء الثالث.pdf",
 english:false
 }
 
 ];
 
 
-/*
-رقم واتساب الإدارة
-*/
-
 const ownerWhatsApp="201550371575";
-
 
 const container=
 document.getElementById("booksContainer");
@@ -826,6 +844,7 @@ document.createElement("div");
 
 card.className="book";
 
+
 card.innerHTML=`
 
 <div class="cover ${book.english ? "english":""}">
@@ -843,6 +862,7 @@ NOX BOOKS
 </div>
 
 </div>
+
 
 <div class="book-body">
 
@@ -918,7 +938,7 @@ document.body.style.overflow="hidden";
 
 /*
 ==================================================
-إغلاق نافذة الشراء
+إغلاق النافذة
 ==================================================
 */
 
